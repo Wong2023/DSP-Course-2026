@@ -1,0 +1,26 @@
+Sampling frequency	Nyquist frequency	Observed peak	Aliasing
+24 kHz	                  12 kHz	 	        7kHz      No
+16 kHz	                   8 kHz	 	        7kHz      No
+12 kHz	                   6 kHz	 	        5kHz      No
+8 kHz	                     4 kHz	 	        1kHz      No
+
+
+
+
+
+
+
+Which sampling frequencies represented the 7 kHz signal correctly?
+24 kHz and 16 kHz. Both satisfy the Nyquist criterion (fs >= 14 kHz), preserving the original 7 kHz frequency without distortion.
+
+When did the 7 kHz signal appear as another frequency?
+At 12 kHz and 8 kHz. At these rates, the sampling frequency dropped below the required Nyquist limit (fs < 14 kHz).
+
+What happened when the Nyquist frequency became lower than 7 kHz?
+Aliasing occurred. The 7 kHz signal folded back into the fundamental Nyquist range [0, fs/2], appearing as false lower frequencies (5 kHz and 1 kHz).
+
+Did the aliased signal sound different?
+Yes. The audio pitch dropped significantly from a high-pitched 7 kHz tone down to 5 kHz (at fs = 12 kHz) and 1 kHz (at fs = 8 kHz).
+
+Why can MATLAB not recover the original 7 kHz signal after aliasing?
+Information is permanently lost. Downsampling without an anti-aliasing filter causes the high-frequency samples to overlap with lower-frequency ones, making them mathematically indistinguishable.
