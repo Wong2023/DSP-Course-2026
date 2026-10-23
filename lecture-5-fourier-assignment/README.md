@@ -1,6 +1,6 @@
 # Lecture 5: Fourier Assignment
 
-**Student Number Last Digit (d):** 4 *(поставь свою цифру)*
+**Student Number Last Digit (d):** 6
 
 ---
 
