@@ -25,10 +25,11 @@
 
 ## Exercise 3: Spectral Leakage
 
-- **Calculated $f_2$:** $f_2 = 13.2 + 0.17 \times 4 = 13.88\text{ Hz}$
-- **Prediction:** Since $13.88\text{ Hz}$ does not align with the $1\text{ Hz}$ bin grid, spectral leakage will occur, causing energy to spread across adjacent bins instead of showing a single sharp peak.
-- **1-sec vs 4-sec comparison:** In the 4-second recording, duration $T = 4\text{ s}$, making bin spacing $\Delta f = \frac{1}{4} = 0.25\text{ Hz}$. The peak at $13.88\text{ Hz}$ becomes significantly sharper and closer to its true value.
-- **Zero-Padding Explanation:** Zero-padding interpolates more frequency values in the spectrum plot, creating a smooth line, but **it does not add new information** or increase true spectral resolution.
+- **Student Digit (d):** 6
+- **Calculated $f_2$:** $f_2 = 13.2 + 0.17 \times 6 = 14.22\text{ Hz}$
+- **Prediction:** Since $14.22\text{ Hz}$ does not fall directly on a $1\text{ Hz}$ grid bin, spectral leakage will occur, making the peak spread into adjacent frequency bins.
+- **1-sec vs 4-sec comparison:** In the 4-second recording ($\Delta f = 0.25\text{ Hz}$), the frequency grid is 4 times denser, significantly narrowing the peak around $14.22\text{ Hz}$.
+- **Zero-Padding Explanation:** Zero-padding interpolates the DTFT curve smoothly showing the sidelobes, but it does not increase the true physical frequency resolution of the 1-second signal.
 
 ---
 
